@@ -96,4 +96,67 @@ function generateSummary() {
     // Mostrar resumen
     document.getElementById('summary').style.display = 'block';
     nextSection(14);
+
+setTimeout(() => {
+        window.print();
+    }, 100);
+    function preparePrint() {
+    // Asegurarse que el resumen está visible
+    document.getElementById('summary').style.display = 'block';
+    nextSection(14);
+    
+    // Esperar un momento para que el navegador renderice los cambios
+    setTimeout(() => {
+        // Ocultar botones antes de imprimir
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(btn => btn.style.display = 'none');
+        
+        window.print();
+        
+        // Restaurar botones después de imprimir
+        setTimeout(() => {
+            buttons.forEach(btn => btn.style.display = '');
+        }, 500);
+    }, 200);
+    function preparePrint() {
+    // Guardar los estilos originales
+    const originalStyles = document.querySelectorAll('style, link[rel="stylesheet"]');
+    
+    // Crear estilo específico para impresión
+    const printStyle = document.createElement('style');
+    printStyle.innerHTML = `
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #summary, #summary * {
+                visibility: visible;
+            }
+            #summary {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background: white !important;
+            }
+            .btn {
+                display: none !important;
+            }
+        }
+    `;
+    document.head.appendChild(printStyle);
+    
+    // Imprimir
+    window.print();
+    
+    // Limpiar después de imprimir
+    setTimeout(() => {
+        document.head.removeChild(printStyle);
+    }, 1000);
+}function preparePrint() {
+    document.getElementById('summary').style.display = 'block';
+    nextSection(14);
+    setTimeout(() => window.print(), 300);
+}
+}
 }
