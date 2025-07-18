@@ -1663,115 +1663,320 @@
 
       <!-- Resumen -->
       <div class="summary" id="summary">
-        <div class="footer-logo">
-          <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
+    <div class="footer-logo">
+        <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
+    </div>
+    
+    <h2>INFORME DE INSPECCIÓN TÉCNICA</h2>
+    
+    <div class="plate-box" id="plateBox">
+        <input type="text" id="vehiclePlateSummary" placeholder="PLACA VEHÍCULO">
+    </div>
+    
+    <div class="vehicle-data" id="vehicleDataSummary">
+        <h3>1. Datos del Vehículo</h3>
+        <div class="form-grid">
+            <div>
+                <p>Clase: <span id="vehicleClassSummary"></span></p>
+                <p>Marca: <span id="vehicleBrandSummary"></span></p>
+                <p>Línea: <span id="vehicleLineSummary"></span></p>
+                <p>Carrocería: <span id="vehicleBodySummary"></span></p>
+            </div>
+            <div>
+                <p>Modelo: <span id="vehicleModelSummary"></span></p>
+                <p>Nacionalidad: <span id="vehicleNationalitySummary"></span></p>
+                <p>Tipo de caja: <span id="vehicleTransmissionSummary"></span></p>
+                <p>Cilindraje: <span id="vehicleEngineSummary"></span></p>
+            </div>
+            <div>
+                <p>Combustible: <span id="vehicleFuelSummary"></span></p>
+                <p>Pintura: <span id="vehiclePaintSummary"></span></p>
+                <p>Servicio: <span id="vehicleServiceSummary"></span></p>
+                <p>Kilometraje: <span id="vehicleMileageSummary"></span></p>
+            </div>
+            <div>
+                <p>Color: <span id="vehicleColorSummary"></span></p>
+                <p>No. chasis: <span id="vehicleChassisSummary"></span></p>
+                <p>No. serial: <span id="vehicleSerialSummary"></span></p>
+                <p>No. motor: <span id="vehicleMotorSummary"></span></p>
+            </div>
         </div>
+    </div>
+
+    <div class="vehicle-data">
+        <h3>2. Documentación</h3>
+        <div class="form-grid">
+            <div>
+                <p>Aseguradora: <span id="insuranceCompanySummary"></span></p>
+                <p>Reporta Siniestros: <span id="accidentsReportedSummary"></span></p>
+                <p>Valor reclamaciones: <span id="claimValueSummary"></span></p>
+            </div>
+            <div>
+                <p>Tarjeta de propiedad: <span id="propertyCardSummary"></span></p>
+                <p>SOAT: <span id="soatSummary"></span></p>
+                <p>Rev.Tecnomecánica: <span id="techReviewSummary"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="vehicle-data">
+        <h3>3. Valores Comerciales</h3>
+        <div class="form-grid">
+            <div>
+                <p>Revista motor: <span id="marketValueSummary"></span></p>
+                <p>Facecolda: <span id="fasecoldaValueSummary"></span></p>
+            </div>
+            <div>
+                <p>Mercado: <span id="marketPriceSummary"></span></p>
+                <p>Depreciación: <span id="depreciationValueSummary"></span></p>
+            </div>
+            <div>
+                <p>Peritoexpert.com: <span id="expertValueSummary"></span></p>
+                <p>Accesorios: <span id="accessoriesValueSummary"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección 4: Inspección Visual y Técnica -->
+    <div class="vehicle-data" id="section4Results">
+        <h3>4. Inspección Visual y Técnica</h3>
+        <div class="form-grid">
+            <div>
+                <p>Guardafango izquierdo: <span id="leftFenderSummary"></span></p>
+                <p>Costado derecho: <span id="rightSideSummary"></span></p>
+            </div>
+            <div>
+                <p>Puerta trasera derecha: <span id="rightRearDoorSummary"></span></p>
+                <p>Estribo derecho: <span id="rightRunningBoardSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section4Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 5: Neumáticos y Amortiguadores -->
+    <div class="vehicle-data" id="section5Results">
+        <h3>5. Vida útil llantas y amortiguadores</h3>
+        <div class="form-grid">
+            <div>
+                <p>Ruedas delanteras: <span id="frontTiresSummary"></span></p>
+                <p>Ruedas traseras: <span id="rearTiresSummary"></span></p>
+            </div>
+            <div>
+                <p>Suspensión delantera: <span id="frontSuspensionSummary"></span></p>
+                <p>Suspensión trasera: <span id="rearSuspensionSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section5Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 6: Sistema Eléctrico -->
+    <div class="vehicle-data" id="section6Results">
+        <h3>6. Sistema Eléctrico</h3>
+        <div class="form-grid">
+            <div>
+                <p>Panorámico delantero: <span id="frontWindshieldSummary"></span></p>
+                <p>Panorámico trasero: <span id="rearWindshieldSummary"></span></p>
+                <p>Vidrios: <span id="windowsSummary"></span></p>
+                <p>Plumillas: <span id="wipersSummary"></span></p>
+            </div>
+            <div>
+                <p>Farola derecha: <span id="rightHeadlightSummary"></span></p>
+                <p>Farola izquierda: <span id="leftHeadlightSummary"></span></p>
+                <p>Stop derecho: <span id="rightBrakeLightSummary"></span></p>
+                <p>Stop izquierdo: <span id="leftBrakeLightSummary"></span></p>
+            </div>
+            <div>
+                <p>Bocina: <span id="hornSummary"></span></p>
+                <p>Batería: <span id="batterySummary"></span></p>
+                <p>Fusibles: <span id="fusesSummary"></span></p>
+                <p>Alternador: <span id="alternatorSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section6Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 7: Fuga de fluidos -->
+    <div class="vehicle-data" id="section7Results">
+        <h3>7. Fuga de fluidos</h3>
+        <div class="form-grid">
+            <div>
+                <p>Fuga de aceite motor: <span id="engineOilLeakSummary"></span></p>
+                <p>Fuga de aceite caja: <span id="transmissionOilLeakSummary"></span></p>
+            </div>
+            <div>
+                <p>Fuga de refrigerante: <span id="coolantLeakSummary"></span></p>
+                <p>Fuga de líquido de freno: <span id="brakeFluidLeakSummary"></span></p>
+            </div>
+            <div>
+                <p>Fuga de dirección hidráulica: <span id="powerSteeringLeakSummary"></span></p>
+                <p>Fuga de diferencial: <span id="differentialLeakSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section7Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 8: Llantas -->
+    <div class="vehicle-data" id="section8Results">
+        <h3>8. Llantas</h3>
+        <div class="form-grid">
+            <div>
+                <p>Llantas delanteras: <span id="frontWheelsSummary"></span></p>
+                <p>Llantas traseras: <span id="rearWheelsSummary"></span></p>
+            </div>
+            <div>
+                <p>Llanta de repuesto: <span id="spareTireSummary"></span></p>
+                <p>Desgaste: <span id="tireWearSummary"></span></p>
+            </div>
+            <div>
+                <p>Estado de rines: <span id="rimsConditionSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section8Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 9: Tren Delantero y suspensión -->
+    <div class="vehicle-data" id="section9Results">
+        <h3>9. Tren Delantero y suspensión</h3>
+        <div class="form-grid">
+            <div>
+                <p>Pastillas de freno: <span id="brakePadsSummary"></span></p>
+                <p>Discos de freno: <span id="brakeDiscsSummary"></span></p>
+                <p>Amortiguadores delanteros: <span id="frontShocksSummary"></span></p>
+                <p>Amortiguadores traseros: <span id="rearShocksSummary"></span></p>
+            </div>
+            <div>
+                <p>Puntas de ejes: <span id="axleTipsSummary"></span></p>
+                <p>Axiales: <span id="axlesSummary"></span></p>
+                <p>Terminales: <span id="terminalsSummary"></span></p>
+                <p>Rotulas: <span id="ballJointsSummary"></span></p>
+            </div>
+            <div>
+                <p>Bujes: <span id="bushingsSummary"></span></p>
+                <p>Tijeras: <span id="controlArmsSummary"></span></p>
+                <p>Caja de dirección: <span id="steeringBoxSummary"></span></p>
+                <p>Rodamientos: <span id="bearingsSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section9Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 10: Interior del vehículo -->
+    <div class="vehicle-data" id="section10Results">
+        <h3>10. Interior del vehículo</h3>
+        <div class="form-grid">
+            <div>
+                <p>Calefacción: <span id="heatingSummary"></span></p>
+                <p>Aire acondicionado: <span id="acSummary"></span></p>
+                <p>Cinturones: <span id="seatBeltsSummary"></span></p>
+                <p>Asiento derecho: <span id="rightSeatSummary"></span></p>
+            </div>
+            <div>
+                <p>Asiento izquierdo: <span id="leftSeatSummary"></span></p>
+                <p>Asientos traseros: <span id="rearSeatsSummary"></span></p>
+                <p>Condición del techo: <span id="roofSummary"></span></p>
+                <p>Manija techo: <span id="roofHandleSummary"></span></p>
+            </div>
+            <div>
+                <p>Luz de techo: <span id="domeLightSummary"></span></p>
+                <p>Carteras: <span id="pocketsSummary"></span></p>
+                <p>Millare: <span id="dashboardSummary"></span></p>
+                <p>Alfombras: <span id="floorMatsSummary"></span></p>
+            </div>
+            <div>
+                <p>Cabeceros: <span id="headrestsSummary"></span></p>
+                <p>Tapetes: <span id="carpetsSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section10Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 11: Prueba de ruta -->
+    <div class="vehicle-data" id="section11Results">
+        <h3>11. Prueba de ruta</h3>
+        <div class="form-grid">
+            <div>
+                <p>Aceleración: <span id="accelerationSummary"></span></p>
+                <p>Maniobrabilidad: <span id="handlingSummary"></span></p>
+                <p>Ángulo de alineación: <span id="alignmentSummary"></span></p>
+            </div>
+            <div>
+                <p>Condición de frenado: <span id="brakingSummary"></span></p>
+                <p>Condición de embrague: <span id="clutchSummary"></span></p>
+                <p>Relación caja-motor: <span id="gearboxEngineSummary"></span></p>
+            </div>
+            <div>
+                <p>Vibraciones: <span id="vibrationsSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section11Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <!-- Sección 12: Accesorios -->
+    <div class="vehicle-data" id="section12Results">
+        <h3>12. Accesorios</h3>
+        <div class="form-grid">
+            <div>
+                <p>Radio: <span id="radioSummary"></span></p>
+                <p>Parlantes: <span id="speakersSummary"></span></p>
+                <p>Planta: <span id="powerPlantSummary"></span></p>
+            </div>
+            <div>
+                <p>Timón o volante: <span id="steeringWheelSummary"></span></p>
+                <p>Rines de lujo: <span id="luxuryRimsSummary"></span></p>
+                <p>Película de seguridad: <span id="safetyFilmSummary"></span></p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h4>Resultado: <span id="section12Percentage"></span>%</h4>
+        </div>
+    </div>
+
+    <h3>13. Porcentaje Global</h3>
+    <div class="circle global-circle" style="--percentage: 0;">
+        <span id="globalPercentage">0%</span>
+    </div>
+
+    <div class="final-result" id="finalResultBox">
+        <p id="finalResult"></p>
+    </div>
+
+    <div class="vehicle-data">
+        <h3>14. Observaciones del Perito</h3>
+        <p id="peritoObservations"></p>
         
-        <h2>INFORME DE INSPECCIÓN TÉCNICA</h2>
-        
-        <div class="plate-box" id="plateBox">
-          <input type="text" id="vehiclePlateSummary" placeholder="PLACA VEHÍCULO">
-        </div>
-        
-        <div class="vehicle-data" id="vehicleDataSummary">
-          <h3>1. Datos del Vehículo</h3>
-          <div class="form-grid">
-            <div>
-              <p>Clase: <span id="vehicleClassSummary"></span></p>
-              <p>Marca: <span id="vehicleBrandSummary"></span></p>
-              <p>Línea: <span id="vehicleLineSummary"></span></p>
-              <p>Carrocería: <span id="vehicleBodySummary"></span></p>
-            </div>
-            <div>
-              <p>Modelo: <span id="vehicleModelSummary"></span></p>
-              <p>Nacionalidad: <span id="vehicleNationalitySummary"></span></p>
-              <p>Tipo de caja: <span id="vehicleTransmissionSummary"></span></p>
-              <p>Cilindraje: <span id="vehicleEngineSummary"></span></p>
-            </div>
-            <div>
-              <p>Combustible: <span id="vehicleFuelSummary"></span></p>
-              <p>Pintura: <span id="vehiclePaintSummary"></span></p>
-              <p>Servicio: <span id="vehicleServiceSummary"></span></p>
-              <p>Kilometraje: <span id="vehicleMileageSummary"></span></p>
-            </div>
-            <div>
-              <p>Color: <span id="vehicleColorSummary"></span></p>
-              <p>No. chasis: <span id="vehicleChassisSummary"></span></p>
-              <p>No. serial: <span id="vehicleSerialSummary"></span></p>
-              <p>No. motor: <span id="vehicleMotorSummary"></span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="vehicle-data">
-          <h3>2. Documentación</h3>
-          <div class="form-grid">
-            <div>
-              <p>SOAT vigente: <span id="soatSummary"></span></p>
-              <p>Tarjeta de propiedad: <span id="propertyCardSummary"></span></p>
-              <p>Reporta siniestros: <span id="accidentsReportedSummary"></span></p>
-            </div>
-            <div>
-              <p>Valor reclamaciones: <span id="claimValueSummary"></span></p>
-              <p>Rev.Tecnomecánica: <span id="techReviewSummary"></span></p>
-              <p>Aseguradora: <span id="insuranceCompanySummary"></span></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="vehicle-data">
-          <h3>3. Valores Comerciales</h3>
-          <div class="form-grid">
-            <div>
-              <p>Revista motor: <span id="marketValueSummary"></span></p>
-              <p>Facecolda: <span id="fasecoldaValueSummary"></span></p>
-            </div>
-            <div>
-              <p>Mercado: <span id="marketPriceSummary"></span></p>
-              <p>Depreciación: <span id="depreciationValueSummary"></span></p>
-            </div>
-            <div>
-              <p>Peritoexpert.com: <span id="expertValueSummary"></span></p>
-              <p>Accesorios: <span id="accessoriesValueSummary"></span></p>
-            </div>
-          </div>
-        </div>
-
-        <h3>4. Resultados por Sección</h3>
-        <div class="results-container" id="resultsContainer"></div>
-
-        <h3>5. Porcentaje Global</h3>
-        <div class="circle global-circle" style="--percentage: 0;">
-          <span id="globalPercentage">0%</span>
-        </div>
-
-        <div class="final-result" id="finalResultBox">
-          <p id="finalResult"></p>
-        </div>
-
-        <div class="vehicle-data">
-          <h3>6. Observaciones del Perito</h3>
-          <p id="peritoObservations"></p>
-          
-          <h4 style="margin-top: 20px;">Acciones recomendadas:</h4>
-          <div id="recommendedActions"></div>
-        </div>
-        
-        <div class="footer-logo">
-          <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
-          <p style="margin-top: 10px; font-size: 12px; color: #999;">
+        <h4 style="margin-top: 20px;">Acciones recomendadas:</h4>
+        <div id="recommendedActions"></div>
+    </div>
+    
+    <div class="footer-logo">
+        <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
+        <p style="margin-top: 10px; font-size: 12px; color: #999;">
             Este diagnóstico automotriz está basado exclusivamente en criterios técnicos y va con destino únicamente del solicitante.
-          </p>
-        </div>
+        </p>
+    </div>
 
-        <div class="actions">
-          <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
-          <button type="button" class="btn btn-accent" onclick="window.print()">Imprimir Reporte</button>
-          <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
-        </div>
-      </div>
-    </form>
-  </div>
+    <div class="actions">
+        <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
+        <button type="button" class="btn btn-accent" onclick="window.print()">Imprimir Reporte</button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
+    </div>
+</div>
 
   <script>
     // Contador de peritajes
@@ -2073,5 +2278,6 @@
     // Inicializar barra de progreso
     updateProgressBar();
   </script>
+  <script src="main.js"></script>
 </body>
 </html>
