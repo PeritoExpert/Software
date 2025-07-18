@@ -516,32 +516,67 @@
     }
     
     /* Print styles */
-    @media print {
-      body {
-        background: none;
-        color: #000;
-      }
-      
-      .container {
-        max-width: 100%;
-        margin: 0;
-        padding: 20px;
-        box-shadow: none;
-        background: none;
-      }
-      
-      .btn, .navigation, .progress-container {
-        display: none !important;
-      }
-      
-      .form-section:not(.active), .summary {
-        display: block !important;
-      }
-      
-      .summary {
-        page-break-before: always;
-      }
-    }
+    
+  @media print {
+  body, .container, .vehicle-data, .result-box, .plate-box, .observations, .final-result {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    margin: 0 !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    border: none !important;
+  }
+
+  .progress-container, .navigation, .btn, .no-print {
+    display: none !important;
+  }
+
+  .form-section:not(.active) {
+    display: none !important;
+  }
+
+  .summary {
+    display: block !important;
+    page-break-before: always;
+  }
+
+  h1, h2, h3, h4, p, span, label {
+    color: black !important;
+  }
+
+  .circle {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Evitar cortes en elementos importantes */
+  .vehicle-data, .result-box {
+    page-break-inside: avoid;
+  }
+
+  /* Forzar nuevos saltos de página entre secciones principales */
+  .vehicle-data h3 {
+    page-break-after: avoid;
+  }
+
+  /* Asegurar que el gráfico circular se imprima correctamente */
+  .circle span {
+    color: black !important;
+  }
+
+  /* Ajustar el logo para impresión */
+  .footer-logo img {
+    filter: none !important;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -1664,10 +1699,11 @@
       <!-- Resumen -->
       <div class="summary" id="summary">
     <div class="footer-logo">
-        <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
+        <img src="Logo Peritaje.png" alt="Logo Peritaje">
     </div>
     
     <h2>INFORME DE INSPECCIÓN TÉCNICA</h2>
+    
     
     
     <div class="vehicle-data" id="vehicleDataSummary">
@@ -1962,17 +1998,16 @@
     </div>
     
     <div class="footer-logo">
-        <img src="https://via.placeholder.com/200x60/15151e/e10600?text=PERITAJE+F1" alt="Logo Peritaje">
+        <img src="Logo Peritaje.png" alt="Logo Peritaje">
         <p style="margin-top: 10px; font-size: 12px; color: #999;">
             Este diagnóstico automotriz está basado exclusivamente en criterios técnicos y va con destino únicamente del solicitante.
         </p>
     </div>
 
     <div class="actions">
-        <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
-        <button type="button" class="btn btn-accent" onclick="window.print()">Imprimir Reporte</button>
-        <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
-    </div>
+    <button type="button" class="btn" onclick="window.print()">Imprimir Informe</button>
+    <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
+    <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
 </div>
 
   <script>
@@ -2268,8 +2303,11 @@
         
         // Limpiar imágenes si hay
         const imagesContainers = document.querySelectorAll('#summary > div[style*="grid-template-columns"]');
+        
         imagesContainers.forEach(container => container.remove());
+      
       }
+    
     }
     
     // Inicializar barra de progreso
