@@ -574,6 +574,14 @@
   .footer-logo img {
     filter: none !important;
   }
+  .summary {
+  display: none; /* Oculto inicialmente */
+}
+
+/* Asegúrate que el formulario sea visible inicialmente */
+#evaluationForm {
+  display: block;
+}
 }
 
 
@@ -795,52 +803,67 @@
           <button type="button" class="btn" onclick="nextSection(4)">Siguiente</button>
         </div>
       </div>
-
-      <!-- Página 4: Inspección Visual y Técnica -->
+      <!-- Página 4: Fuga de fluidos -->
       <div class="form-section" id="section-4">
-        <h2>Inspección Visual y Técnica</h2>
+        <h2>Fuga de fluidos</h2>
         <div class="form-grid">
           <div class="form-group">
-            <label>Guardafango izquierdo</label>
-            <select id="leftFender">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">No aplica</option>
+            <label>Fuga de aceite motor</label>
+            <select id="engineOilLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Costado derecho</label>
-            <select id="rightSide">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">No aplica</option>
+            <label>Fuga de aceite caja</label>
+            <select id="transmissionOilLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Puerta tracera derecha</label>
-            <select id="rightRearDoor">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">No aplica</option>
+            <label>Fuga de refrigerante</label>
+            <select id="coolantLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Estribo derecho</label>
-            <select id="rightRunningBoard">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">No aplica</option>
+            <label>Fuga de liquido de freno</label>
+            <select id="brakeFluidLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Fuga de dirección hidráulica</label>
+            <select id="powerSteeringLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Fuga de diferencial</label>
+            <select id="differentialLeak">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
             </select>
           </div>
         </div>
@@ -851,64 +874,9 @@
         </div>
       </div>
 
-      <!-- Página 5: Neumáticos y Llantas -->
+      <!-- Página 5: Sistema Eléctrico -->
       <div class="form-section" id="section-5">
-        <h2>Vida útil llantas y amortiguadores</h2>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Ruedas Delanteras:</label>
-            <select id="frontTires">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Ruedas Traseras:</label>
-            <select id="rearTires">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Suspensión Delantera:</label>
-            <select id="frontSuspension">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Suspensión Trasera:</label>
-            <select id="rearSuspension">
-              <option value="">Seleccione estado</option>
-              <option value="Bueno">Bueno</option>
-              <option value="Regular">Regular</option>
-              <option value="Malo">Malo</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="navigation">
-          <button type="button" class="btn btn-secondary" onclick="nextSection(4)">Anterior</button>
-          <button type="button" class="btn" onclick="nextSection(6)">Siguiente</button>
-        </div>
-      </div>
-
-      <!-- Página 6: Sistema Eléctrico -->
-      <div class="form-section" id="section-6">
-        <h2>Sistema Eléctrico</h2>
+        <h2>Sistema Eléctrico y Compresión</h2>
         <div class="form-grid">
           <div class="form-group">
             <label>Panorámico delantero</label>
@@ -1041,6 +1009,42 @@
               <option value="N/A">N/A</option>
             </select>
           </div>
+           <div class="form-group">
+            <label>Compresión Pistón 1 (PSI)</label>
+            <input type="number" id="piston1Compression" placeholder="Valor en PSI">
+          </div>
+          <div class="form-group">
+            <label>Compresión Pistón 2 (PSI)</label>
+            <input type="number" id="piston2Compression" placeholder="Valor en PSI">
+          </div>
+          <div class="form-group">
+            <label>Compresión Pistón 3 (PSI)</label>
+            <input type="number" id="piston3Compression" placeholder="Valor en PSI">
+          </div>
+          <div class="form-group">
+            <label>Compresión Pistón 4 (PSI)</label>
+            <input type="number" id="piston4Compression" placeholder="Valor en PSI">
+          </div>
+          <div class="form-group">
+            <label>Alternador</label>
+            <select id="alternator">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Batería</label>
+            <select id="battery">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
 
           <div class="form-group">
             <label>Luz porta placa</label>
@@ -1055,71 +1059,88 @@
         </div>
         
         <div class="navigation">
+          <button type="button" class="btn btn-secondary" onclick="nextSection(4)">Anterior</button>
+          <button type="button" class="btn" onclick="nextSection(6)">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Página 6: Inspección Visual y Técnica -->
+      <div class="form-section" id="section-6">
+        <h2>Inspección Visual y Técnica</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Guardafango izquierdo</label>
+            <select id="leftFender">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">No aplica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Costado derecho</label>
+            <select id="rightSide">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">No aplica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Puerta tracera derecha</label>
+            <select id="rightRearDoor">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">No aplica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Estribo derecho</label>
+            <select id="rightRunningBoard">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+              <option value="N/A">No aplica</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="navigation">
           <button type="button" class="btn btn-secondary" onclick="nextSection(5)">Anterior</button>
           <button type="button" class="btn" onclick="nextSection(7)">Siguiente</button>
         </div>
       </div>
 
-      <!-- Página 7: Fuga de fluidos -->
+      <!-- Página 7: Neumáticos y Llantas -->
       <div class="form-section" id="section-7">
-        <h2>Fuga de fluidos</h2>
+        <h2>Vida útil amortiguadores</h2>
         <div class="form-grid">
           <div class="form-group">
-            <label>Fuga de aceite motor</label>
-            <select id="engineOilLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
+            <label>Suspensión Delantera:</label>
+            <select id="frontSuspension">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
               <option value="N/A">N/A</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Fuga de aceite caja</label>
-            <select id="transmissionOilLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Fuga de refrigerante</label>
-            <select id="coolantLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Fuga de liquido de freno</label>
-            <select id="brakeFluidLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Fuga de dirección hidráulica</label>
-            <select id="powerSteeringLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Fuga de diferencial</label>
-            <select id="differentialLeak">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
+            <label>Suspensión Trasera:</label>
+            <select id="rearSuspension">
+              <option value="">Seleccione estado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
               <option value="N/A">N/A</option>
             </select>
           </div>
@@ -1129,8 +1150,9 @@
           <button type="button" class="btn btn-secondary" onclick="nextSection(6)">Anterior</button>
           <button type="button" class="btn" onclick="nextSection(8)">Siguiente</button>
         </div>
-      </div>
+      </div>    
 
+      
       <!-- Página 8: Llantas -->
       <div class="form-section" id="section-8">
         <h2>Llantas</h2>
@@ -1504,9 +1526,79 @@
           <button type="button" class="btn" onclick="nextSection(11)">Siguiente</button>
         </div>
       </div>
-
-      <!-- Página 11: Prueba de Ruta -->
+      <!-- Página 11: Accesorios -->
       <div class="form-section" id="section-11">
+        <h2>Accesorios</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Radio</label>
+            <select id="radio">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Parlantes</label>
+            <select id="speakers">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Planta</label>
+            <select id="powerPlant">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Timón o volante</label>
+            <select id="steeringWheel">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Rines de lujo</label>
+            <select id="luxuryRims">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Película de seguridad</label>
+            <select id="safetyFilm">
+              <option value="">Seleccione una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="navigation">
+          <button type="button" class="btn btn-secondary" onclick="nextSection(11)">Anterior</button>
+          <button type="button" class="btn" onclick="nextSection(13)">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Página 12: Prueba de Ruta -->
+      <div class="form-section" id="section-12">
         <h2>Prueba de Ruta</h2>
         <div class="form-grid">
           <div class="form-group">
@@ -1593,76 +1685,7 @@
         </div>
       </div>
 
-      <!-- Página 12: Accesorios -->
-      <div class="form-section" id="section-12">
-        <h2>Accesorios</h2>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Radio</label>
-            <select id="radio">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Parlantes</label>
-            <select id="speakers">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Planta</label>
-            <select id="powerPlant">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Timón o volante</label>
-            <select id="steeringWheel">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Rines de lujo</label>
-            <select id="luxuryRims">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Película de seguridad</label>
-            <select id="safetyFilm">
-              <option value="">Seleccione una opción</option>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-              <option value="N/A">N/A</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="navigation">
-          <button type="button" class="btn btn-secondary" onclick="nextSection(11)">Anterior</button>
-          <button type="button" class="btn" onclick="nextSection(13)">Siguiente</button>
-        </div>
-      </div>
+      
 
       <!-- Página 13: Observaciones del Perito -->
       <div class="form-section" id="section-13">
@@ -2002,316 +2025,14 @@
         <p style="margin-top: 10px; font-size: 12px; color: #999;">
             Este diagnóstico automotriz está basado exclusivamente en criterios técnicos y va con destino únicamente del solicitante.
         </p>
+        <div class="actions">
+      <button type="button" class="btn" onclick="window.print()">Imprimir Informe</button>
+      <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
+      <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
     </div>
-
-    <div class="actions">
-    <button type="button" class="btn" onclick="window.print()">Imprimir Informe</button>
-    <button type="button" class="btn" onclick="insertImage()">Insertar Imágenes</button>
-    <button type="button" class="btn btn-secondary" onclick="resetForm()">Nueva Evaluación</button>
+  </div>
 </div>
 
-  <script>
-    // Contador de peritajes
-    let peritajesCount = localStorage.getItem('peritajesCount') || 0;
-    document.getElementById('peritajesCount').textContent = peritajesCount;
-    
-    function incrementPeritajes() {
-      peritajesCount++;
-      localStorage.setItem('peritajesCount', peritajesCount);
-      document.getElementById('peritajesCount').textContent = peritajesCount;
-    }
-
-    // Navegación entre secciones
-    let currentSection = 1;
-    const totalSections = 13;
-    
-    function updateProgressBar() {
-      const progress = (currentSection / totalSections) * 100;
-      document.getElementById('progressBar').style.width = `${progress}%`;
-    }
-    
-    function nextSection(section) {
-      document.getElementById(`section-${currentSection}`).classList.remove('active');
-      currentSection = section;
-      document.getElementById(`section-${currentSection}`).classList.add('active');
-      updateProgressBar();
-      
-      // Scroll to top of section
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Cálculo de porcentajes
-    const sectionWeights = {
-      1: 0,   // Datos del vehículo (no se califica)
-      2: 10,  // Documentación
-      3: 5,   // Valores
-      4: 15,  // Inspección Visual
-      5: 10,  // Neumáticos y Llantas
-      6: 15,  // Sistema Eléctrico
-      7: 10,  // Fuga de fluidos
-      8: 5,   // Llantas
-      9: 10,  // Tren Delantero
-      10: 5,  // Interior
-      11: 10, // Prueba de Ruta
-      12: 5,  // Accesorios
-      13: 0   // Observaciones (no se califica)
-    };
-
-    function evaluateSection(sectionId) {
-      const section = document.getElementById(`section-${sectionId}`);
-      const inputs = section.querySelectorAll('select');
-      let score = 0;
-      let total = 0;
-      
-      inputs.forEach(input => {
-        const value = input.value;
-        if (value && value !== "N/A") {
-          total++;
-          switch(value) {
-            case "Bueno": score += 100; break;
-            case "Regular": score += 65; break;
-            case "Malo": score += 10; break;
-            case "Sí": 
-              // Para preguntas de Sí/No, Sí suma 100% si es positivo (ej: tiene accesorio)
-              // Para fugas, Sí suma 0% (es malo)
-              if (input.id.includes('Leak')) {
-                score += 0;
-              } else {
-                score += 100;
-              }
-              break;
-            case "No":
-              // Para preguntas de Sí/No, No suma 0% si es negativo (ej: no tiene accesorio)
-              // Para fugas, No suma 100% (es bueno)
-              if (input.id.includes('Leak')) {
-                score += 100;
-              } else {
-                score += 0;
-              }
-              break;
-          }
-        }
-      });
-      
-      return {
-        percentage: total > 0 ? (score / total) : 0,
-        name: getSectionName(sectionId)
-      };
-    }
-    
-    function getSectionName(sectionId) {
-      const names = {
-        1: "Datos del Vehículo",
-        2: "Documentación",
-        3: "Valores Comerciales",
-        4: "Inspección Visual",
-        5: "Neumáticos y Amortiguadores",
-        6: "Sistema Eléctrico",
-        7: "Fuga de Fluidos",
-        8: "Llantas",
-        9: "Tren Delantero",
-        10: "Interior",
-        11: "Prueba de Ruta",
-        12: "Accesorios",
-        13: "Observaciones"
-      };
-      return names[sectionId] || `Sección ${sectionId}`;
-    }
-    
-    function calculateGlobalScore(sectionScores) {
-      let totalWeight = 0;
-      let weightedSum = 0;
-      
-      for (const [sectionId, score] of Object.entries(sectionScores)) {
-        const weight = sectionWeights[sectionId] || 0;
-        if (weight > 0) {
-          weightedSum += score.percentage * weight;
-          totalWeight += weight;
-        }
-      }
-      
-      return totalWeight > 0 ? weightedSum / totalWeight : 0;
-    }
-
-    // Generar resumen
-    function generateSummary() {
-      incrementPeritajes();
-      
-      // Recopilar datos de todas las secciones
-      const sectionScores = {};
-      for (let i = 1; i <= totalSections; i++) {
-        sectionScores[i] = evaluateSection(i);
-      }
-      
-      // Calcular puntaje global
-      const globalScore = calculateGlobalScore(sectionScores);
-      const passed = globalScore >= 75;
-      
-      // Actualizar datos del vehículo en el resumen
-      const fields = [
-        'vehicleClass', 'vehicleBrand', 'vehicleLine', 'vehicleBody', 
-        'vehicleModel', 'vehicleNationality', 'vehicleTransmission', 
-        'vehicleEngine', 'vehicleFuel', 'vehiclePaint', 'vehicleService', 
-        'vehicleMileage', 'vehicleColor', 'vehicleChassis', 'vehicleSerial', 
-        'vehicleMotor'
-      ];
-      
-      fields.forEach(field => {
-        const element = document.getElementById(field);
-        const summaryElement = document.getElementById(`${field}Summary`);
-        if (element && summaryElement) {
-          summaryElement.textContent = element.value || 'N/A';
-        }
-      });
-      
-      // Actualizar documentación
-      document.getElementById('soatSummary').textContent = document.getElementById('soat').value || 'N/A';
-      document.getElementById('propertyCardSummary').textContent = document.getElementById('propertyCard').value || 'N/A';
-      document.getElementById('accidentsReportedSummary').textContent = document.getElementById('accidentsReported').value || 'N/A';
-      document.getElementById('claimValueSummary').textContent = document.getElementById('claimValue').value ? '$' + document.getElementById('claimValue').value : 'N/A';
-      document.getElementById('techReviewSummary').textContent = document.getElementById('techReview').value || 'N/A';
-      document.getElementById('insuranceCompanySummary').textContent = document.getElementById('insuranceCompany').value || 'N/A';
-      
-      // Actualizar valores comerciales
-      document.getElementById('marketValueSummary').textContent = document.getElementById('marketValue').value ? '$' + document.getElementById('marketValue').value : 'N/A';
-      document.getElementById('fasecoldaValueSummary').textContent = document.getElementById('fasecoldaValue').value ? '$' + document.getElementById('fasecoldaValue').value : 'N/A';
-      document.getElementById('marketPriceSummary').textContent = document.getElementById('marketPrice').value ? '$' + document.getElementById('marketPrice').value : 'N/A';
-      document.getElementById('depreciationValueSummary').textContent = document.getElementById('depreciationValue').value ? '$' + document.getElementById('depreciationValue').value : 'N/A';
-      document.getElementById('expertValueSummary').textContent = document.getElementById('expertValue').value ? '$' + document.getElementById('expertValue').value : 'N/A';
-      document.getElementById('accessoriesValueSummary').textContent = document.getElementById('accessoriesValue').value ? '$' + document.getElementById('accessoriesValue').value : 'N/A';
-      
-      // Actualizar observaciones
-      document.getElementById('peritoObservations').textContent = document.getElementById('observations').value || 'Ninguna observación registrada.';
-      
-      // Mostrar acciones recomendadas
-      const actionsContainer = document.getElementById('recommendedActions');
-      actionsContainer.innerHTML = '';
-      
-      const actionCheckboxes = document.querySelectorAll('input[name="actions"]:checked');
-      if (actionCheckboxes.length > 0) {
-        actionCheckboxes.forEach(checkbox => {
-          const actionItem = document.createElement('p');
-          actionItem.textContent = checkbox.value;
-          actionsContainer.appendChild(actionItem);
-        });
-      } else {
-        actionsContainer.innerHTML = '<p>No se marcaron acciones recomendadas.</p>';
-      }
-      
-      // Mostrar resultados por sección
-      const resultsContainer = document.getElementById('resultsContainer');
-      resultsContainer.innerHTML = '';
-      
-      for (let i = 2; i <= 12; i++) { // Solo las secciones que se califican
-        const { percentage, name } = sectionScores[i];
-        
-        const resultBox = document.createElement('div');
-        resultBox.className = 'result-box';
-        resultBox.innerHTML = `
-          <h4>${name}</h4>
-          <div class="circle" style="--percentage: ${percentage.toFixed(2)};">
-            <span>${percentage.toFixed(2)}%</span>
-          </div>
-        `;
-        resultsContainer.appendChild(resultBox);
-      }
-      
-      // Actualizar porcentaje global
-      const globalCircle = document.querySelector('.global-circle');
-      globalCircle.style.setProperty('--percentage', globalScore.toFixed(2));
-      document.getElementById('globalPercentage').textContent = `${globalScore.toFixed(2)}%`;
-      
-      // Mostrar resultado final
-      const finalResult = document.getElementById('finalResult');
-      finalResult.textContent = passed ? 'APROBADO' : 'NO APROBADO';
-      
-      const finalResultBox = document.getElementById('finalResultBox');
-      finalResultBox.className = passed ? 'final-result passed' : 'final-result failed';
-      
-      // Mostrar resumen
-      document.getElementById('summary').style.display = 'block';
-      nextSection(14);
-    }
-    
-    // Insertar imágenes
-    function insertImage() {
-      const input = document.createElement('input');
-      input.type = 'file';
-      input.accept = 'image/*';
-      input.multiple = true;
-      input.onchange = (e) => {
-        const files = e.target.files;
-        if (files.length > 0) {
-          const imagesContainer = document.createElement('div');
-          imagesContainer.style.display = 'grid';
-          imagesContainer.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
-          imagesContainer.style.gap = '10px';
-          imagesContainer.style.marginTop = '20px';
-          
-          Array.from(files).forEach(file => {
-            if (file) {
-              const reader = new FileReader();
-              reader.onload = (event) => {
-                const imgContainer = document.createElement('div');
-                imgContainer.style.position = 'relative';
-                
-                const img = document.createElement('img');
-                img.src = event.target.result;
-                img.style.maxWidth = '100%';
-                img.style.borderRadius = '6px';
-                img.style.border = '1px solid var(--f1-gray)';
-                
-                const deleteBtn = document.createElement('button');
-                deleteBtn.textContent = 'X';
-                deleteBtn.style.position = 'absolute';
-                deleteBtn.style.top = '5px';
-                deleteBtn.style.right = '5px';
-                deleteBtn.style.background = 'var(--f1-red)';
-                deleteBtn.style.color = 'white';
-                deleteBtn.style.border = 'none';
-                deleteBtn.style.borderRadius = '50%';
-                deleteBtn.style.width = '25px';
-                deleteBtn.style.height = '25px';
-                deleteBtn.style.cursor = 'pointer';
-                deleteBtn.onclick = () => imgContainer.remove();
-                
-                imgContainer.appendChild(img);
-                imgContainer.appendChild(deleteBtn);
-                imagesContainer.appendChild(imgContainer);
-              };
-              reader.readAsDataURL(file);
-            }
-          });
-          
-          document.querySelector('.actions').before(imagesContainer);
-        }
-      };
-      input.click();
-    }
-    
-    // Reiniciar formulario
-    function resetForm() {
-      if (confirm('¿Está seguro que desea comenzar una nueva evaluación? Todos los datos actuales se perderán.')) {
-        document.getElementById('evaluationForm').reset();
-        document.getElementById('summary').style.display = 'none';
-        document.querySelectorAll('.form-section').forEach(section => {
-          section.classList.remove('active');
-        });
-        currentSection = 1;
-        document.getElementById('section-1').classList.add('active');
-        updateProgressBar();
-        
-        // Limpiar imágenes si hay
-        const imagesContainers = document.querySelectorAll('#summary > div[style*="grid-template-columns"]');
-        
-        imagesContainers.forEach(container => container.remove());
-      
-      }
-    
-    }
-    
-    // Inicializar barra de progreso
-    updateProgressBar();
   </script>
   <script src="main.js"></script>
 </body>
